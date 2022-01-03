@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
  
-export default function Home() {
+export default function Play() {
   return (
     <div className="container">
       <Head>
@@ -15,13 +15,20 @@ export default function Home() {
           <li><a href="#contact">Contact</a></li>
           <li><a href="#about">About</a></li>
         </ul> 
+
       </Head>
 
       <main>
-        <Header title="Welcome to my app!" />
+        <Header title="PLAYYYY!" />
         <p className="description">
-          Welcome to the clock game!
+          P L A Y !
         </p>
+
+        <span className="dot"></span>
+        <span className="dot"></span>
+        <span className="dot"></span>
+        <span className="dot"></span> 
+
       </main>
 
       <Footer />

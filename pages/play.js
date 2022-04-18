@@ -1,37 +1,27 @@
 import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
+import Sidebar from './Sidebar'
+import react, { useState } from "react";
+import GetUserInput from './GetUserInput';
  
 export default function Play() {
   return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="/play">Play</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#about">About</a></li>
-        </ul> 
-
-      </Head>
+    <div className="h-screen bg-slate-600">
 
       <main>
-        <Header title="PLAYYYY!" />
-        <p className="description">
-          P L A Y !
-        </p>
+        <Sidebar />
 
-        <span className="dot"></span>
-        <span className="dot"></span>
-        <span className="dot"></span>
-        <span className="dot"></span> 
+        <center>
+          <div id='clock'>
+            <img src='clock.png' alt='clock'></img>
+          </div>
+        </center>
 
+        <GetUserInput />
       </main>
 
-      <Footer />
+
     </div>
   )
 }

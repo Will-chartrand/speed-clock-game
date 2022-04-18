@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -31,32 +35,26 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
 }
 
 li {
   display: inline;
-  float: right;
+  float: center;
 }
 
 a {
-  float: right;
+  float: center;
   display: block;
   padding: 8px;
-  background-color: #333;
 }
 
 li a {
-  float: right;
+  float: center;
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
 }
 
 
@@ -74,4 +72,9 @@ li a:hover {
   background-color: #111;
   border-radius: 50%;
   display: inline-block;
+}
+
+#clock {
+  max-width: 20rem;
+  max-height: 20rem;
 }

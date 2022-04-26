@@ -2,17 +2,15 @@ import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
 import Sidebar from './Sidebar'
+import Game from './Game'
  
 export default function Home() {
   return (
-    <div className="h-screen bg-slate-600">
-      <Sidebar />
+    <div className="bg-slate-600">
       <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Welcome to the clock game!
-        </p>
+        <Game />
       </main>
+      <Sidebar />
     </div>
   )
 }

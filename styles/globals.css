@@ -75,6 +75,26 @@ li a {
 }
 
 #clock {
-  max-width: 20rem;
-  max-height: 20rem;
+  position: relative;
+  height: 16rem;
+  display: block;
+}
+
+#hourHand {
+  transform-origin: bottom center;
+}
+
+#minuteHand {
+  transform-origin: bottom center;
+}
+
+.clockHand {
+    position: absolute;
+    display: inline-block;
+    scale: 40%;
+    top: -7rem;
+}
+
+.clockBody {
+  position: absolute;
 }

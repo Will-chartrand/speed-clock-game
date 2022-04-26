@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Image from 'next/image'
 
 var clock = '/clock.png'
 var hours = String(Math.floor(Math.random() * 12) + 1);

@@ -11,9 +11,9 @@ var degree = 0;
 
 function Game() {
   // Declare a new state variable, which we'll call "count"
-  const [input, setInput] = useState('');
-  const [userScore, setUserScore] = useState(0);
-  const [highScore, setHighScore] = useState(0);
+  var [input, setInput] = useState('');
+  var [userScore, setUserScore] = useState(0);
+  var [highScore, setHighScore] = useState(0);
 
   function checkAnswer() {
     if (document.getElementById('inputBox').value.length == answer.length) {  // If the input's length matches the length of the answer string

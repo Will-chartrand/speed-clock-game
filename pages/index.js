@@ -6,7 +6,7 @@ import Game from './Game'
  
 export default function Home() {
   return (
-    <div className="bg-slate-600">
+    <div className="h-screen bg-slate-600">
       <main>
         <Game />
       </main>

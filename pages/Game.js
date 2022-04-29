@@ -17,10 +17,12 @@ function Game() {
 
   function checkAnswer() {
     if (document.getElementById('inputBox').value.length == answer.length) {  // If the input's length matches the length of the answer string
-      if (Math.abs(answer.parseInt - document.getElementById('inputBox').value.parseInt) < 3) { // If the input is the same as the desired answer
+      console.log(parseInt(answer) - parseInt(document.getElementById('inputBox').value));
+      if (Math.abs(parseInt(answer) - parseInt(document.getElementById('inputBox').value)) < 3) { // If the input is the same as the desired answer
         textAnswerCorrect = "Correct!!";
         userScore += 1;
         setUserScore(userScore);  // Increment user's score by one
+
       } else {
         textAnswerCorrect = "Not correct :(";
         if (userScore > highScore) {  // Set new high score if user exceeded previous high score

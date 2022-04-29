@@ -18,7 +18,7 @@
     "react-icons": "^4.3.1"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^4.4.4",
+    "@netlify/plugin-nextjs": "^4.6.0",
     "autoprefixer": "^10.4.4",
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",

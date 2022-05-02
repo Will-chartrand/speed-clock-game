@@ -46,11 +46,6 @@ function Game() {
     }
   }
 
-  degree += 10;
-  //document.querySelector("#hourHand").setAttribute('style', 'transform: rotate(' + (degree) + 'deg)');
-  //document.querySelector("#minuteHand").setAttribute('style', 'transform: rotate(' + (degree) + 'deg)');
-
-
   // Set the clock hands to the proper positions
   function updateHands() {
     document.querySelector("#hourHand").setAttribute('style', 'transform: rotate(' + (parseInt(hours) * (360 / 12) + (minutes / 2)) + 'deg)'); // Calculate degree of hour hand (accounting for position of minute hand)
@@ -59,7 +54,7 @@ function Game() {
 
   // Set the clock image to the specified clock image
   function setClock(clockName) {
-    document.querySelector("#clockBody").src = clockName; // Set the clock name to string argument given
+    // document.querySelector("#clockBody").setAttribute('src', clockName); // Set the clock name to string argument given
   }
 
   if (typeof window === 'object') {

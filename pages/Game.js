@@ -61,7 +61,6 @@ function Game() {
     // Check if document is finally loaded
     document.addEventListener("DOMContentLoaded", function () {
       updateHands();
-      setClock('clock.png');
     });
   }
 

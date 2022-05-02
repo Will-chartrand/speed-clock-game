@@ -57,20 +57,16 @@ function Game() {
     document.querySelector("#minuteHand").setAttribute('style', 'transform: rotate(' + (parseInt(minutes) * (360 / 60)) + 'deg)'); // Calculate degree of minute hand
   }
 
-  // Set the clock image to the black circle image
-  function setClockNoNums() {
-    document.getElementById("clockBody").src = "clock.png";
-  }
-
-  // Set the clock image to the analog clock image
-  function setClockNums() {
-    document.getElementById("clockBody").src = "clock-numbers.png";
+  // Set the clock image to the specified clock image
+  function setClock(clockName) {
+    document.querySelector("#clockBody").src = clockName; // Set the clock name to string argument given
   }
 
   if (typeof window === 'object') {
     // Check if document is finally loaded
     document.addEventListener("DOMContentLoaded", function () {
       updateHands();
+      setClock('clock.png');
     });
   }
 
@@ -86,19 +82,18 @@ function Game() {
         <input id="inputBox" type="text" value={input} onChange={e => { checkAnswer(); updateHands(); setInput(e.currentTarget.value); }} />
         <br></br>
         <br></br>
-        <p>Score: {userScore}</p>
-        <p>answer is {answer}</p>
+        <p>Score: {userScore}   Highscore: {highScore}</p>
+        {/* <p>answer is {answer}</p> */}
         <p>{textAnswerCorrect}</p>
-        <p>Highscore: {highScore}</p>
-        <p>input: {input}</p>
+        {/* <p>input: {input}</p> */}
 
         <br></br>
         <br></br>
 
-        <button onClick={setClockNums} className="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
+        <button onClick={setClock('clock-numbers.png')} className="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
           Numbers
         </button>
-        <button onClick={setClockNoNums} className="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
+        <button onClick={setClock('clock.png')} className="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
           No Numbers
         </button>
 

@@ -90,9 +90,8 @@ li a {
 
 .clockHand {
     position: absolute;
-    display: inline-block;
     scale: 40%;
-    top: -7rem;
+    bottom: 55%;
 }
 
 .clockBody {

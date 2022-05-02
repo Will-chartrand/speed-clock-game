@@ -54,7 +54,7 @@ function Game() {
 
   // Set the clock image to the specified clock image
   function setClock(clockName) {
-    // document.querySelector("#clockBody").setAttribute('src', clockName); // Set the clock name to string argument given
+    document.querySelector("#clockBody").setAttribute('src', clockName); // Set the clock name to string argument given
   }
 
   if (typeof window === 'object') {
@@ -85,10 +85,10 @@ function Game() {
         <br></br>
         <br></br>
 
-        <button onClick={setClock('clock-numbers.png')} className="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
+        <button onClick={e => { setClock('clock-numbers.png') }} className="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
           Numbers
         </button>
-        <button onClick={setClock('clock.png')} className="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
+        <button onClick={e => { setClock('clock.png') }} className="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
           No Numbers
         </button>
 

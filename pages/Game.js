@@ -1,5 +1,10 @@
 import { useState } from "react";
 
+import { Fragment } from 'react';
+import { Menu, Transition } from '@headlessui/react';
+import { ChevronDownIcon } from '@heroicons/react/solid';
+import classNames from 'classnames';
+
 var clock = '/clock.png'
 var hours = String(Math.floor(Math.random() * 12) + 1);
 var minutes = ("00" + String(Math.floor(Math.random() * 60))).slice(-2);
@@ -9,12 +14,13 @@ var textAnswerCorrect = " ";
 
 var degree = 0;
 
+
 function Game() {
   // Declare a new state variable, which we'll call "count"
   var [input, setInput] = useState('');
   var [userScore, setUserScore] = useState(0);
   var [highScore, setHighScore] = useState(0);
-
+  
   function checkAnswer() {
     if (document.getElementById('inputBox').value.length == answer.length) {  // If the input's length matches the length of the answer string
       console.log(parseInt(answer) - parseInt(document.getElementById('inputBox').value));
@@ -22,7 +28,7 @@ function Game() {
         textAnswerCorrect = "Correct!!";
         userScore += 1;
         setUserScore(userScore);  // Increment user's score by one
-
+  
       } else {
         textAnswerCorrect = "Not correct :(";
         if (userScore > highScore) {  // Set new high score if user exceeded previous high score
@@ -34,7 +40,7 @@ function Game() {
         }
         setUserScore(0); // Set user's score back to zero
       }
-
+  
       //Set times
       hours = String(Math.floor(Math.random() * 12) + 1);
       minutes = ("00" + String(Math.floor(Math.random() * 60))).slice(-2); // Make sure minutes string always has two characters, fill with zeroes if needed
@@ -42,19 +48,14 @@ function Game() {
       answer = hours.concat(minutes);
       // Clear input box
       document.getElementById('inputBox').value = "";
-
+  
     }
   }
-
+  
   // Set the clock hands to the proper positions
   function updateHands() {
     document.querySelector("#hourHand").setAttribute('style', 'transform: rotate(' + (parseInt(hours) * (360 / 12) + (minutes / 2)) + 'deg)'); // Calculate degree of hour hand (accounting for position of minute hand)
     document.querySelector("#minuteHand").setAttribute('style', 'transform: rotate(' + (parseInt(minutes) * (360 / 60)) + 'deg)'); // Calculate degree of minute hand
-  }
-
-  // Set the clock image to the specified clock image
-  function setClock(clockName) {
-    document.querySelector("#clockBody").setAttribute('src', clockName); // Set the clock name to string argument given
   }
 
   if (typeof window === 'object') {
@@ -63,7 +64,7 @@ function Game() {
       updateHands();
     });
   }
-
+  
   return (
     <div>
       <div id='clock'>
@@ -84,15 +85,12 @@ function Game() {
         <br></br>
         <br></br>
 
-        <button onClick={e => { setClock('clock-numbers.png') }} className="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
-          Numbers
-        </button>
-        <button onClick={e => { setClock('clock.png') }} className="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">
-          No Numbers
-        </button>
+
+        <br></br>
+        <br></br>
+        <br></br>
 
       </center>
-
     </div>
   );
 }

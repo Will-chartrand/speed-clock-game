@@ -22,7 +22,7 @@ export default function Home() {
 
       <div className='absolute w-full top-14'>
 
-      <Menu as="div" className="absolute inline-block text-left right-4 top-14 flex-row z-10">
+      <Menu as="div" className="absolute text-left inline-block right-4 top-14 flex-row z-10 invisible sm:visible">
           <div>
             <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100">
               Clock
@@ -85,7 +85,7 @@ export default function Home() {
           </Transition>
         </Menu>
 
-      <Menu as="div" className="absolute inline-block text-left right-4 top-24">
+      <Menu as="div" className="absolute inline-block text-left right-4 top-24 invisible sm:visible">
           <div>
             <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-10">
               Clock Hands

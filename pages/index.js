@@ -9,8 +9,8 @@ import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 import classNames from 'classnames';
 
-import setClock from './setClock';
-import setHand from './setHand';
+import setClock from '../scripts/setClock';
+import setHand from '../scripts/setHand';
  
 export default function Home() {
   return (

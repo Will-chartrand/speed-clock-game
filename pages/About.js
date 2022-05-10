@@ -5,8 +5,8 @@ import Sidebar from './Sidebar'
 
 export default function About() {
     return (
-        <div className="bg-slate-600">
-            <main>
+        <div>
+            <main className='h-screen w-full bg-slate-600'>
                 <Sidebar />
                 <div className='bg-black bg-opacity-40 text-white rounded-xl w-4/5 h-3/4 p-4 px-2'>
                     <center>

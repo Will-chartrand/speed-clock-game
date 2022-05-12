@@ -20,7 +20,7 @@ function Game() {
   var [input, setInput] = useState('');
   var [userScore, setUserScore] = useState(0);
   var [highScore, setHighScore] = useState(0);
-  
+
   function checkAnswer() {
     if (document.getElementById('inputBox').value.length == answer.length) {  // If the input's length matches the length of the answer string
       console.log(parseInt(answer) - parseInt(document.getElementById('inputBox').value));
@@ -28,7 +28,7 @@ function Game() {
         textAnswerCorrect = "Correct!!";
         userScore += 1;
         setUserScore(userScore);  // Increment user's score by one
-  
+
       } else {
         textAnswerCorrect = "Not correct :(";
         if (userScore > highScore) {  // Set new high score if user exceeded previous high score
@@ -40,7 +40,7 @@ function Game() {
         }
         setUserScore(0); // Set user's score back to zero
       }
-  
+
       //Set times
       hours = String(Math.floor(Math.random() * 12) + 1);
       minutes = ("00" + String(Math.floor(Math.random() * 60))).slice(-2); // Make sure minutes string always has two characters, fill with zeroes if needed
@@ -48,10 +48,9 @@ function Game() {
       answer = hours.concat(minutes);
       // Clear input box
       document.getElementById('inputBox').value = "";
-  
     }
   }
-  
+
   // Set the clock hands to the proper positions
   function updateHands() {
     document.querySelector("#hourHand").setAttribute('style', 'transform: rotate(' + (parseInt(hours) * (360 / 12) + (minutes / 2)) + 'deg)'); // Calculate degree of hour hand (accounting for position of minute hand)
@@ -64,7 +63,7 @@ function Game() {
       updateHands();
     });
   }
-  
+
   return (
     <div>
       <div id='clock'>
@@ -74,15 +73,20 @@ function Game() {
       </div>
 
       <center>
+        <br></br>
         <input id="inputBox" type="text" value={input} onChange={e => { checkAnswer(); updateHands(); setInput(e.currentTarget.value); }} />
         <br></br>
         <br></br>
-        <p>Score: {userScore}   Highscore: {highScore}</p>
-        {/* <p>answer is {answer}</p> */}
-        <p>{textAnswerCorrect}</p>
-        {/* <p>input: {input}</p> */}
-
+        <div className='flex justify-center'>
+          <p className='p-3 text-white bg-black rounded-xl bg-opacity-60'>Score: {userScore}</p>
+          <div className='w-1'></div>
+          <p className='p-3 text-white bg-black rounded-xl bg-opacity-60 justify-end'>Highscore: {highScore}</p>
+          {/* <p>answer is {answer}</p> */}
+          {/* <p>input: {input}</p> */}
+        </div>
         <br></br>
+        <p>{textAnswerCorrect}</p>
+
         <br></br>
 
 

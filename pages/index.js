@@ -35,9 +35,9 @@ export default function Home() {
 
       <div className='absolute w-full top-14'>
 
-        <Menu as="div" className="absolute text-left inline-block right-4 top-14 flex-row z-10 invisible sm:visible">
+        <Menu as="div" className="absolute text-left inline-block right-4 top-14 flex-row z-10 invisible sm:visible ">
           <div>
-            <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100">
+            <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 text-sm font-medium hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 p-3 text-white bg-black rounded-xl bg-opacity-60">
               Clock
               <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
             </Menu.Button>
@@ -100,7 +100,7 @@ export default function Home() {
 
         <Menu as="div" className="absolute inline-block text-left right-4 top-24 invisible sm:visible">
           <div>
-            <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-10">
+            <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 text-sm font-medium hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 p-3 text-white bg-black rounded-xl bg-opacity-60">
               Clock Hands
               <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
             </Menu.Button>

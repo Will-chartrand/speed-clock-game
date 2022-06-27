@@ -68,7 +68,7 @@ function Game() {
       document.getElementById("hourHand").style.height = "" + document.querySelector(".clockBody").height * 0.4 + "px";
       // document.getElementById("minuteHand").style.right = "" + document.querySelector(".clockBody").width / 2  - document.getElementById("minuteHand").style.width / 2 + "px";
       // document.getElementById("hourHand").style.right = "" + document.querySelector(".clockBody").width / 2 - document.getElementById("minuteHand").style.width / 2 + "px";
-      alert(document.getElementById("hourHand").style.height);
+      // alert(document.getElementById("hourHand").style.height);
     });
   }
 

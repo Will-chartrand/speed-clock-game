@@ -92,6 +92,7 @@ li a {
 .clockHand {
     position: absolute;
     bottom: 50%;
+    left: 30%
 }
 
 .clockBody {

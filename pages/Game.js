@@ -5,7 +5,7 @@ import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 import classNames from 'classnames';
 
-var clock = '/clock.png'
+var clock = '/clock-numbers.png'
 var hours = String(Math.floor(Math.random() * 12) + 1);
 var minutes = ("00" + String(Math.floor(Math.random() * 60))).slice(-2);
 
@@ -55,12 +55,20 @@ function Game() {
   function updateHands() {
     document.querySelector("#hourHand").setAttribute('style', 'transform: rotate(' + (parseInt(hours) * (360 / 12) + (minutes / 2)) + 'deg)'); // Calculate degree of hour hand (accounting for position of minute hand)
     document.querySelector("#minuteHand").setAttribute('style', 'transform: rotate(' + (parseInt(minutes) * (360 / 60)) + 'deg)'); // Calculate degree of minute hand
+    document.getElementById("minuteHand").style.height = "" + document.querySelector(".clockBody").height * 0.4 + "px";
+    document.getElementById("hourHand").style.height = "" + document.querySelector(".clockBody").height * 0.4 + "px";
   }
 
   if (typeof window === 'object') {
     // Check if document is finally loaded
     document.addEventListener("DOMContentLoaded", function () {
       updateHands();
+      
+      document.getElementById("minuteHand").style.height = "" + document.querySelector(".clockBody").height * 0.4 + "px";
+      document.getElementById("hourHand").style.height = "" + document.querySelector(".clockBody").height * 0.4 + "px";
+      // document.getElementById("minuteHand").style.right = "" + document.querySelector(".clockBody").width / 2  - document.getElementById("minuteHand").style.width / 2 + "px";
+      // document.getElementById("hourHand").style.right = "" + document.querySelector(".clockBody").width / 2 - document.getElementById("minuteHand").style.width / 2 + "px";
+      alert(document.getElementById("hourHand").style.height);
     });
   }
 
@@ -68,8 +76,8 @@ function Game() {
     <div>
       <div id='clock'>
         <img id='clockBody' class="clockBody" src={clock} alt='clock'></img>
-        <img id="hourHand" class="clockHand" src='hourHand.png' alt='hand'></img>
-        <img id="minuteHand" class="clockHand" src='minuteHand.png' alt='hand'></img>
+          <img id="hourHand" class="clockHand" src='hourHand.png' alt='hand'></img>
+          <img id="minuteHand" class="clockHand" src='minuteHand.png' alt='hand'></img>
       </div>
 
       <center>

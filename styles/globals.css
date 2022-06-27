@@ -91,7 +91,6 @@ li a {
 
 .clockHand {
     position: absolute;
-    scale: 40%;
     bottom: 50%;
 }
 

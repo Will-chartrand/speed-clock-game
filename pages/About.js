@@ -14,7 +14,7 @@ export default function About() {
                         <Header className='text-lg font-bold' title="Welcome to the clock game!" />
                     </div>
 
-                    <p className="description w-10/12 p-2 text-center">
+                    <p className="description w-10/12 h-2/5 p-2 text-center">
                         <br></br>
                         This project was created for the purpose of practicing the telling of time with an analog watchface.
                         <br></br>
@@ -35,7 +35,7 @@ export default function About() {
                         <div className='text-lg font-bold'>
                             <Header title="How To Play" />
                         </div>
-                    <p className="description w-10/12 p-2 text-center">
+                    <p className="description w-10/12 h-2/5 p-2 text-center">
                         <br></br>
                         The clock presents you with a time, and the goal is to input the correct number into the text box. After the number is typed, it will be evaluated as incorrect or correct (&plusmn;1 minute of the correct time).
                         <br></br>
